@@ -1,0 +1,16 @@
+.category-page {
+
+    h1 {
+        margin: 0;
+        margin-bottom: 6.3rem;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+
+    .product-area {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(386px, 1fr));
+        grid-gap: 40px;
+        max-width: 100%;
+    }
+}

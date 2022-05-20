@@ -1,0 +1,15 @@
+.checkout-page {
+    display: grid;
+    place-items: center;
+    height: 70vh;
+
+    div {
+        position: relative;
+        margin-left: -10rem;
+    }
+
+    h1,
+    h2 {
+        margin: 0.5rem;
+    }
+}

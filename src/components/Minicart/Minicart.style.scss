@@ -1,0 +1,128 @@
+.minicart-wrapper {
+    margin-left: 1rem;
+
+    &.expanded .minicart-window {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+}
+
+.minicart-relative {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.minicart-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: black;
+    color: var(--color-light-primary);
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto";
+    transform: translate(-40%, -50%);
+
+    &.hidden {
+        opacity: 0;
+    }
+}
+
+.minicart-window {
+    position: absolute;
+    z-index: 99;
+    top: 3.5rem;
+    right: 0;
+    width: 20.3rem;
+    height: 33.75rem;
+    padding: 0.8rem;
+    padding-bottom: 1.25rem;
+    background-color: var(--color-light-primary);
+    pointer-events: none;
+    cursor: default;
+    opacity: 0;
+    transform: translateY(-2rem);
+    transition: transform 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.shade {
+    position: absolute;
+    z-index: 97;
+    left: 0;
+    right: 0;
+    top: 78px;
+    bottom: 0;
+    pointer-events: none;
+    background-color: #39374838;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    &.expanded {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.my-bag {
+    margin: 0;
+}
+
+.minicart-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.81rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 0.875rem;
+    right: 0.875rem;
+
+    .button {
+        width: 100%;
+    }
+}
+
+.minicart-is-empty {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    margin-top: -5rem;
+    pointer-events: none;
+
+    &.totally-empty {
+        display: flex;
+    }
+}
+
+.minicart-items-wrapper {
+    width: 100%;
+    height: calc(100% - 8rem);
+    overflow: auto;
+}
+
+.total-price {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+
+    span:nth-of-type(1) {
+        font-family: "Roboto";
+        font-weight: 500;
+    }
+
+    span:nth-of-type(2) {
+        margin-left: auto;
+        font-family: "Raleway";
+        font-weight: 700;
+    }
+}
